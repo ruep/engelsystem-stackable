@@ -14,6 +14,8 @@ Die Files in ein Verzeichnis kopieren und in dem Verzeichnis::
     >>> docker run -d -e MYSQL_PASS="<your_password>" --name db --volumes-from engel_datastore -p 3306:3306 tutum/mysql:5.5
     >>> docker run -d --link db:db --name app -e DB_PASS="<your_password>" -p 80:80 ruep/engelssytem-stackable
 
+    >>> vi ~/.msmtprc
+
     OSX: 
     >>> 
 
