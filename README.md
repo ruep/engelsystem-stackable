@@ -20,6 +20,9 @@ Die Files in ein Verzeichnis kopieren und in dem Verzeichnis::
 Engelsystem im Browser aufrufen  
 Anmeldung mit `admin:asdfasdf` vornehmen. 
 
+## Was nicht funktioniert
+* email verschicken
+
 ## Probleme?:
 
 Wenn keine Anmeldung erscheint::
