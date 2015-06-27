@@ -1,5 +1,5 @@
 FROM tutum/apache-php:latest
-MAINTAINER Marc Gehling <m.gehling@gehling.de>
+MAINTAINER Marc Gehling <m.gehling@gmx.de>
 
 # Install packages 
 RUN apt-get update && \
