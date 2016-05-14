@@ -18,8 +18,6 @@ RUN git clone --recursive https://github.com/engelsystem/engelsystem.git /engelw
   && ln -s /engelweb/public /app
 
 ADD config.php /engelweb/config/config.php
-ADD patch-index.php /engelweb/public/patch-index.php
-RUN patch /engelweb/public/index.php < /engelweb/public/patch-index.php
 
 # Add config msmtp
 Add .msmtprc /root/.msmtprc
@@ -43,6 +41,7 @@ ENV DB_USER admin
 ENV DB_PASS **ChangeMe**
 
 RUN chmod 755 /engelweb/db/install.sql \
+  && chmod 755 /engelweb/db/update.sql \
   && chmod 777 /engelweb/import
 
 EXPOSE 80
