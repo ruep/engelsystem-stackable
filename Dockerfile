@@ -41,6 +41,7 @@ ENV DB_USER admin
 ENV DB_PASS **ChangeMe**
 
 RUN chmod 755 /engelweb/db/install.sql \
+  && chmod 755 /engelweb/db/update.sql \
   && chmod 777 /engelweb/import
 
 EXPOSE 80

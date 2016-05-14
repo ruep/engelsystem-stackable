@@ -51,6 +51,14 @@ if [[ $DB_CONNECTABLE -eq 0 ]]; then
                 exit RET
             fi
         fi
+        if [ -f /engelweb/db/update.sql ]; then
+            echo "=> Loading update database data to $DB_NAME"
+            RET=$(mysql -u$DB_USER -p$DB_PASS -h$DB_HOST -P$DB_PORT $DB_NAME < /engelweb/db/update.sql)
+            if [[ RET -ne 0 ]]; then
+                echo "Cannot load update database data for engelsystem"
+                exit RET
+            fi
+        fi
         echo "=> Done!"    
     else
         echo "=> Skipped creation of database $DB_NAME – it already exists."
