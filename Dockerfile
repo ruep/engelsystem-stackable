@@ -18,8 +18,6 @@ RUN git clone --recursive https://github.com/engelsystem/engelsystem.git /engelw
   && ln -s /engelweb/public /app
 
 ADD config.php /engelweb/config/config.php
-ADD patch-index.php /engelweb/public/patch-index.php
-RUN patch /engelweb/public/index.php < /engelweb/public/patch-index.php
 
 # Add config msmtp
 Add .msmtprc /root/.msmtprc
